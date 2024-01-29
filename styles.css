@@ -598,3 +598,23 @@ header {
   }
  
 }
+
+@media (max-width: 450px){
+  .nav-bar {
+    padding: 28px 48px;
+  }
+
+  #nav-bar-cart {
+    height: 18px;
+    padding-right: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+}
