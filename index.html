@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Sneakers Product Page</title>
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">  
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-data">
+        <img src="./images/logo.svg" alt="logo">
+        <ul class="nav-list">
+         <li><a href="#" class="nav-link">Collections</a></li>
+         <li><a href="#" class="nav-link">Men</a></li>
+         <li><a href="#" class="nav-link">Women</a></li>
+         <li><a href="#" class="nav-link">About</a></li>
+         <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="cart-avatar">
+        <img src="./images/icon-cart.svg" alt="cart" id="nav-bar-cart" onClick="showOrHide()">
+        <img src="./images/image-avatar.png" alt="avatar" id="nav-bar-avatar">
+      </div>
+    </nav>
+  </header>
+  
+  <!--empty cart-->
+  <div class="cart-empty">
+    <div class="cart-empty-container">
+      <div class="cart-empty-box">
+        <p class="paragraph-1">Cart</p>
+        <p class="paragraph-2">Your cart is empty</p>
+      </div>
+    </div>
+  </div>
+
+  <!--filled cart-->
+  <div class="cart-filled">
+    <div class="cart-filled-container">
+      <div class="cart-filled-box">
+        <p class="paragraph-1">Cart</p>
+        <div class="cart-item">
+          <img src="./images/image-product-1.jpg" alt="Product Image"/>
+          <div class="cart-item-details">
+            <p class="product-name">Fall Limited Edition Sneaker</p>
+            <p class="product-price"> $125.00 x <span id="cart-quantity" class="quantity">0</span></p>
+          </div>
+        </div>
+        <div class="cart-total">
+          <p>Total:</p>
+          <p id="cart-total-price">  $0.00</p>
+        </div>
+        <button id="checkout" class="button-checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero-page">
+    <div class="hero-page-wrapper">
+      <div class="display-section">
+        <div class="display-container">
+          <img src="./images/image-product-1.jpg" alt="image" class="display-img">
+        </div>
+        <div class="thumbnail-container">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" class="thumbnail-img" data-image="./images/image-product-1.jpg">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2" class="thumbnail-img" data-image="./images/image-product-2.jpg">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3" class="thumbnail-img" data-image="./images/image-product-3.jpg">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4" class="thumbnail-img" data-image="./images/image-product-4.jpg">
+        </div>
+      </div>
+
+      <!--image slider for mobile--> 
+      <div class="mobile-slider">
+        <div class="image-container">
+          <img src="./images/image-product-1.jpg" alt="Product Image" class="slide">
+          <img src="./images/image-product-2.jpg" alt="Product Image" class="slide">
+          <img src="./images/image-product-3.jpg" alt="Product Image" class="slide">
+          <img src="./images/image-product-4.jpg" alt="Product Image" class="slide">
+        </div>
+        <div class="icon-svg">
+          <img src="./images/icon-previous.svg" class="prev" onclick="prevSlide()">
+          <img src="./images/icon-next.svg" class="next" onclick="nextSlide()">
+        </div>
+      </div>
+
+      <div class="hero-details">
+        <p class="hero-title">SNEAKER COMPANY</p>
+        <h2 class="hero-subtitle">Fall Limited Edition Sneakers</h2>
+        <p class="hero-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        
+        <div class="pricing">
+          <div class="discounted-price">
+            <p class="price-now">$125.00</p>
+            <p class="discount">50%</p>
+          </div>
+
+          <div id="price-before">
+            <p class="price-before">$250.00</p>
+          </div>
+        </div>
+        
+        <div class="calc">
+          <div class="plus-minus">
+            <img src="./images/icon-minus.svg" alt="icon-minus" class="icon-minus">
+            <span class="zero">0</span>
+            <img src="./images/icon-plus.svg" alt="icon-plus" class="icon-plus">
+          </div>
+          <div class="button">
+            <ion-icon name="cart-outline" class="add-to-cartbtn"></ion-icon>
+            <p class="button-text">Add to cart</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    
+  </section>
+ 
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
